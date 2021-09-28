@@ -1,9 +1,9 @@
 # phrasings
 
-sox phrasings-1.aiff phrasings-1-cut.aiff bass -3 40 75h trim 9 46
-sox phrasings-1-cut.aiff stem-a.aiff pad 21.2
+sox phrasings-1.aiff phrasings-1-cut.aiff  bass -3 40 75h trim 9 46 reverb 80
+sox phrasings-1-cut.aiff stem-a.aiff pad 20.2 reverb 50
 
-sox phrasings-2.aiff phrasings-2-filtered.aiff highpass 600 300h bass -20 1200 300h
+sox phrasings-2.aiff phrasings-2-filtered.aiff highpass 1200 300h bass -20 1200 300h reverb 20
 sox phrasings-2-filtered.aiff stem-b.aiff trim 10.6 1:21.62 gain 3
 
 sox stem-b.aiff stem-b-reverb.aiff gain -9 pad 0 3 reverb -w 70 20 80 100 32
@@ -27,6 +27,7 @@ sox -m stem-a.aiff stem-b.aiff stem-c.aiff ../album/song-x.wav trim 0 2:00
 
 rm stem-a.aiff stem-b.aiff song-4-filtered.aiff stem-c.aiff
 
+
 # spacecrafts
 
 sox spacecrafts-4.aiff stem-a.aiff trim 0 49.5 highpass 2560 160h reverb 20
@@ -37,3 +38,20 @@ sox spacecrafts-1.aiff stem-c.aiff lowpass 320 12.5h # trim 0 20.5
 sox -m stem-d.aiff stem-b.aiff stem-c.aiff ../album/spacecrafts.wav
 
 rm stem-a.aiff stem-b.aiff stem-c.aiff stem-d.aiff
+
+
+# determination
+
+sox song-5.aiff stem-a.aiff treble 200 1 trim 0 23
+sox song-5.aiff stem-aa.aiff treble 200 1 trim 0 13 repeat 4
+sox stem-aa.aiff stem-aaa.aiff pad 1:01 
+sox song-5.aiff stem-a.aiff treble 200 1 trim 0 13
+sox song-5.aiff stem-b.aiff pad 12
+sox magic-noise-chord-3-d.aiff stem-c.aiff 
+sox stem-c.aiff stem-d.aiff pad 8 highpass 3200 400 gain -12 reverb -w 100 100 80 100 20 gain 
+sox stem-c.aiff stem-e.aiff pad 24 highpass 1000 20 gain -10 reverb 20 100 80 100 15
+sox stem-c.aiff stem-f.aiff pad 40 highpass 250 2 gain -12
+
+sox -m stem-a.aiff stem-aaa.aiff stem-b.aiff stem-d.aiff stem-e.aiff stem-f.aiff ../album/determination.wav
+
+rm stem-a.aiff stem-aa.aiff stem-aaa.aiff stem-b.aiff stem-c.aiff stem-d.aiff stem-e.aiff stem-f.aiff
