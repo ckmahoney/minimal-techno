@@ -1,8 +1,9 @@
 # minimal-techno
 
-A techno album produces using SuperCollider, sox, and math.
+A mini minimal techno album made with SuperCollider, sox, and math.
 
-There is no patterning or sequencing happening in any of the .scd files. Each one plays a collection of sine waves simultaneously.
+There is no patterning or sequencing happening in any of the SuperCollider files. 
+Each one simultaneously plays a collection of sine waves.
 
 `/scores` contains the SuperCollider files used to produce the album.
 
