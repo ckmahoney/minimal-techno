@@ -16,3 +16,11 @@ Each one simultaneously plays a collection of sine waves.
 ```
 cd recording && sh mix
 ```
+
+## Play
+
+Use your favorite media player, or
+```
+cd album;
+for file in `ls`; do play $file; done;
+```
