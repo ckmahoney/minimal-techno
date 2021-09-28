@@ -31,12 +31,14 @@ var freqSpiral = {|root = 60, nSteps = 5|
 	freqs;
 };
 
-var techno = {|root=100|
-	plays.value(freqSpiral.value(root*2,5));
-	plays.value(freqSpiral.value(root*4,3));
-	plays.value(freqSpiral.value(root*5,2));
-	plays.value(freqSpiral.value(root*6,1));
+var techno = {|root=50|
+	plays.value(freqSpiral.value(root,8));
+	plays.value(freqSpiral.value(root*2,8));
+	plays.value(freqSpiral.value(root*4,4));
+	plays.value(freqSpiral.value(root*8,2));
+	// plays.value(freqSpiral.value(root*16,1)); // extra
 };
+
 
 techno.value;
 )

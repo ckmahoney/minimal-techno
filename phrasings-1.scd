@@ -26,19 +26,12 @@ var freqSpiral = {|root = 60, nSteps = 5|
 		freqs.add(above);
 	});
 
-	freqs.postln;
-
 	freqs;
 };
 
-var techno = {|root=50|
-	plays.value(freqSpiral.value(root,8));
-	plays.value(freqSpiral.value(root*2,8));
-	plays.value(freqSpiral.value(root*4,4));
-	plays.value(freqSpiral.value(root*8,2));
-	// plays.value(freqSpiral.value(root*16,1)); // extra
+var techno = {
+	plays.value(freqSpiral.value(55,8));
 };
-
 
 techno.value;
 )

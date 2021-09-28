@@ -31,7 +31,7 @@ var freqSpiral = {|root = 60, nSteps = 5|
 	freqs;
 };
 
-var techno5 = {|root=40|
+var techno = {|root=40|
 	plays.value(freqSpiral.value(root,2));
 	plays.value(freqSpiral.value(root*2,4));
 	plays.value(freqSpiral.value(root*4,2));
@@ -39,32 +39,5 @@ var techno5 = {|root=40|
 	plays.value(freqSpiral.value(root*16,0)); // extra
 };
 
-var techno4 = {
-	plays.value(freqSpiral.value(50,20));
-	plays.value(freqSpiral.value(100,10));
-	plays.value(freqSpiral.value(200,5));
-	plays.value(freqSpiral.value(400,3));
-	plays.value(freqSpiral.value(500,2));
-	plays.value(freqSpiral.value(600,1));
-};
-
-var techno3 = {
-	plays.value(freqSpiral.value(170,1));
-	plays.value(freqSpiral.value(65,2));
-	// plays.value(freqSpiral.value(32.5*6,1));
-};
-
-
-var techno2 = {
-	plays.value(freqSpiral.value(60,3));
-};
-
-
-var techno1 = {
-    2.do{|i|
-	    plays.value(freqSpiral.value(50,i));
-    };
-};
-
-techno5.value;
+techno.value;
 )
