@@ -1,3 +1,7 @@
+# head-woofer
+
+sox head-woofer.aiff ../album/head-woofer.wav
+
 # phrasings
 
 ## uses phrasings-1.scd, phrasings-2.scd
@@ -64,3 +68,7 @@ sox stem-c.aiff stem-f.aiff pad 40 highpass 250 2 gain -12
 sox -m stem-a.aiff stem-aaa.aiff stem-b.aiff stem-d.aiff stem-e.aiff stem-f.aiff ../album/determination.wav
 
 rm stem-a.aiff stem-aa.aiff stem-aaa.aiff stem-b.aiff stem-c.aiff stem-d.aiff stem-e.aiff stem-f.aiff
+
+# techno-spiral
+
+sox techno-spiral.aiff ../album/techno-spiral.wav
